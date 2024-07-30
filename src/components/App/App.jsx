@@ -1,21 +1,16 @@
 import "modern-normalize";
-import css from "../App/App.module.css";
-import ContactForm from "../ContactForm/ContactForm";
-import SearchBox from "../SearchBox/SearchBox";
-import ContactList from "../ContactList/ContactList";
+import ProductsList from "../ProductsList/ProductsList";
 import { TiContacts } from "react-icons/ti";
 
 
 export default function App() {
   return (
-    <div className={css.container}>
-      <h1 className={css.title}>
+    <div>
+      <h1>
         Phonebook
         <TiContacts />
       </h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
+      <ProductsList />
     </div>
   );
 }
