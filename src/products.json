@@ -3,65 +3,73 @@
       "id": 1,
       "name": "Earthen Bottle",
       "href": "#",
-      "price": "$48",
+      "price": 48,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-      "imageAlt": "Tall slender porcelain bottle with natural clay textured body and cork stopper."
+      "imageAlt": "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+      "quantity": 1
     },
     {
       "id": 2,
       "name": "Nomad Tumbler",
       "href": "#",
-      "price": "$35",
+      "price": 35,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
-      "imageAlt": "Olive drab green insulated bottle with flared screw lid and flat top."
+      "imageAlt": "Olive drab green insulated bottle with flared screw lid and flat top.",
+      "quantity": 1
     },
     {
       "id": 3,
       "name": "Focus Paper Refill",
       "href": "#",
-      "price": "$89",
+      "price": 89,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-      "imageAlt": "Person using a pen to cross a task off a productivity paper card."
+      "imageAlt": "Person using a pen to cross a task off a productivity paper card.",
+      "quantity": 1
     },
     {
       "id": 4,
       "name": "Machined Mechanical Pencil",
       "href": "#",
-      "price": "$35",
+      "price": 35,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
-      "imageAlt": "Hand holding black machined steel mechanical pencil with brass tip and top."
+      "imageAlt": "Hand holding black machined steel mechanical pencil with brass tip and top.",
+      "quantity": 1
     },
     {
       "id": 5,
       "name": "Artisan Mug",
       "href": "#",
-      "price": "$24",
+      "price": 24,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-05.jpg",
-      "imageAlt": "Handmade ceramic mug with glazed finish."
+      "imageAlt": "Handmade ceramic mug with glazed finish.",
+      "quantity": 1
     },
     {
       "id": 6,
       "name": "Leather Journal",
       "href": "#",
-      "price": "$50",
+      "price": 50,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-06.jpg",
-      "imageAlt": "Handcrafted leather journal with strap closure."
+      "imageAlt": "Handcrafted leather journal with strap closure.",
+      "quantity": 1
     },
     {
       "id": 7,
       "name": "Ceramic Vase",
       "href": "#",
-      "price": "$40",
+      "price": 40,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-07.jpg",
-      "imageAlt": "Minimalist ceramic vase with a matte finish."
+      "imageAlt": "Minimalist ceramic vase with a matte finish.",
+      "quantity": 1
     },
     {
       "id": 8,
       "name": "Wooden Desk Organizer",
       "href": "#",
-      "price": "$30",
+      "price": 30,
       "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-08.jpg",
-      "imageAlt": "Natural wood desk organizer with multiple compartments."
+      "imageAlt": "Natural wood desk organizer with multiple compartments.",
+      "quantity": 1
     }
   ]
   

@@ -2,14 +2,23 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Dialog, DialogPanel, DialogTitle, DialogBackdrop } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { closeCart, removeItem, updateQuantity } from '../../redux/cartSlice';
+import { useNavigate } from 'react-router-dom';
+import { Toaster, toast } from 'react-hot-toast';
 
 export default function Cart() {
   const isOpen = useSelector((state) => state.cart.isOpen);
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleOrdered = () => {
+    dispatch(closeCart());
+    navigate('/ordered');
+  };
 
   const handleRemove = (id) => {
     dispatch(removeItem(id));
+    toast.success('Removed')
   };
 
   const handleQuantityChange = (id, quantity) => {
@@ -17,7 +26,11 @@ export default function Cart() {
   };
 
   const getSubtotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce((total, item) => {
+      const price = item.price;
+      const quantity = item.quantity;
+      return total + (price * quantity);
+    }, 0);
   };
 
   return (
@@ -75,17 +88,18 @@ export default function Cart() {
                                 <p className="mt-1 text-sm text-gray-500">{item.color}</p>
                               </div>
                               <div className="flex flex-1 items-end justify-between text-sm">
-                                <p className="text-gray-500">Qty {item.quantity}</p>
 
                                 <div className="flex items-center">
                                   <button
                                     type="button"
                                     onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
                                     className="font-medium text-indigo-600 hover:text-indigo-500"
-                                    disabled={item.quantity <= 1} // Деактивуємо кнопку, якщо кількість <= 1
                                   >
                                     -
                                   </button>
+
+                                    <p className="text-gray-500 ml-2">{item.quantity}</p>
+                                  
                                   <button
                                     type="button"
                                     onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
@@ -116,13 +130,13 @@ export default function Cart() {
                     <p>${getSubtotal().toFixed(2)}</p>
                   </div>
                   <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
-                  <div className="mt-6">
-                    <a
-                      href="#"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  <div className="mt-6 flex items-center justify-center">
+                  <button
+                      onClick={handleOrdered}
+                      className="flex items-center justify-center rounded-md border border-transparen bg-indigo-600 px-6 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                     >
-                      Checkout
-                    </a>
+                      Order
+                    </button>
                   </div>
                   <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
@@ -143,6 +157,9 @@ export default function Cart() {
           </div>
         </div>
       </div>
+      <Toaster
+  position="bottom-center"
+  reverseOrder={false}/>
     </Dialog>
   );
 }

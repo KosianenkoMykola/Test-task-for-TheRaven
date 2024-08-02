@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem } from '../../redux/cartSlice';
 import { selectProducts } from '../../redux/productsSlice';
+import { Toaster, toast } from 'react-hot-toast';
 
 export default function ProductsList() {
   const products = useSelector(selectProducts);
@@ -8,6 +9,7 @@ export default function ProductsList() {
 
   const handleAddToCart = (product) => {
     dispatch(addItem(product));
+    toast.success('Added to cart')
   };
 
   return (
@@ -17,7 +19,7 @@ export default function ProductsList() {
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+            <div key={product.id} className="group">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img
                   alt={product.imageAlt}
@@ -25,13 +27,21 @@ export default function ProductsList() {
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
               </div>
-              <button className="mt-2 px-4 py-2 bg-slate-500 text-white rounded hover:bg-slate-600" onClick={() => handleAddToCart(product)}>Buy/add</button>
-              <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-              <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
-            </a>
+              <button
+                className="mt-3 px-5 py-[2px] font-thin bg-slate-500 text-white/80 rounded-sm hover:bg-slate-600"
+                onClick={() => handleAddToCart(product)}
+              >
+                Buy
+              </button>
+              <h3 className="mt-2 text-sm text-gray-700">{product.name}</h3>
+              <p className="mt-1 text-lg font-medium text-gray-900">${product.price}</p>
+            </div>
           ))}
         </div>
       </div>
-    </div>
+      <Toaster
+  position="bottom-center"
+  reverseOrder={false}/>
+  </div>
   );
 }
