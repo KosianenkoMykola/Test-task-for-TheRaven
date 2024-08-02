@@ -1,16 +1,16 @@
-import "modern-normalize";
+import Cart from "../Cart/Cart";
+import Header from "../Header/Header";
 import ProductsList from "../ProductsList/ProductsList";
-import { TiContacts } from "react-icons/ti";
 
 
 export default function App() {
   return (
-    <div>
-      <h1>
-        Phonebook
-        <TiContacts />
-      </h1>
+    <>
+      <Header />
+      <main>
+      <Cart /> 
       <ProductsList />
-    </div>
+      </main>
+    </>
   );
 }
