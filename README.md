@@ -1,48 +1,48 @@
 # Test Task for TheRaven
 
-## Опис проєкту
+## Project Description
 
-Цей проєкт створено як тестове завдання для позиції Junior Front-End Developer у компанії TheRaven. 
-Мета проєкту - створити простий магазин на основі React.js, Redux з наступною функціональністю:
+This project was created as a test task for the Junior Front-End Developer position at TheRaven. The goal of the project is to create a simple shop based on React.js and Redux with the following functionality:
 
-- Відображення списку товарів.
-- Можливість додавання товарів до кошика.
-- Динамічне оновлення загальної суми товарів у кошику.
-- Управління кількістю товарів у кошику.
-- Генерація JSON з замовленими товарами та інформацією про користувача при замовленні.
-- Зберігання доданих товарів в кошику у локальному сховищі.
+- Displaying a list of products.
+- Adding products to the cart.
+- Dynamically updating the total price of products in the cart.
+- Managing the quantity of products in the cart.
+- Generating JSON with ordered goods and user information upon ordering.
+- Storing added products in the cart in local storage.
 
-## Технології
+## Technologies
 
 - Vite
 - React.js
 - Redux
 - Tailwind CSS
-- @headlessui/react для модальних вікон
-- GitHub та Vercel для розгортання
+- @headlessui/react for modal dialogs
+- GitHub and Vercel for deployment
 
-## Функціональність
+## Functionality
 
-1. **Список товарів**: 
-   - Відображення списку доступних товарів з інформацією про них.
-2. **Додавання до кошика**: 
-   - Можливість додати товар до кошика, натиснувши кнопку "Buy".
-3. **Кошик**: 
-   - Відображення товарів, доданих до кошика, з можливістю змінювати їх кількість або видаляти.
-   - Динамічне оновлення загальної суми товарів у кошику, яка відображається біля іконки кошика в хедері.
-   - Після оновлення сторінки товари в кошику зберігаються.
-4. **Оформлення замовлення**: 
-   - Генерація JSON з замовленими товарами та інформацією про користувача при оформленні замовлення.
+1. **Product List**:
+   - Displaying a list of available products with information about them.
+2. **Add to Cart**:
+   - Ability to add a product to the cart by clicking the "Buy" button.
+3. **Cart**:
+   - Displaying the products added to the cart with the ability to change their quantity or remove them.
+   - Dynamically updating the total price of products in the cart, displayed next to the cart icon in the header.
+   - Products in the cart are retained after page refresh.
+4. **Order Placement**:
+   - Generating JSON with ordered products and user information upon ordering.
 
-## Інструкція з розгортання
+## Deployment Instructions
 
-1. Клонувати репозиторій:
+1. Clone the repository:
    ```sh
    git clone https://github.com/KosianenkoMykola/Test-task-for-TheRaven.git
-2. Встановити залежності:
+
+2. Install dependencies:
    npm install
-3. Запустити проект:
+3. Start the project:
    npm run dev
 
-## Деплой
-Проєкт розгорнуто на Vercel за наступним посиланням: https://test-task-for-the-raven.vercel.app/
+## Deployment
+The project is deployed on Vercel at the following link: https://test-task-for-the-raven.vercel.app/
