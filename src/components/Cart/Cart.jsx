@@ -34,7 +34,7 @@ export default function Cart() {
   };
 
   return (
-    <Dialog open={isOpen} onClose={() => dispatch(closeCart())} className="fixed inset-0 z-10 overflow-y-auto">
+    <Dialog open={isOpen} onClose={() => dispatch(closeCart())} className="fixed inset-0 overflow-y-auto">
       <DialogBackdrop
         transition
         className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"

@@ -24,7 +24,7 @@ export default function ProductsList() {
                 <img
                   alt={product.imageAlt}
                   src={product.imageSrc}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
               <button
